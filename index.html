@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de imagem</title>
+    <style>
+        #msg{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="msg">
+
+    </h1>
+    <form action="./process.php" method="post" enctype="multipart/form-data">
+        <label for="files" id="image" tabindex="0">
+            Envie suas imagens aqui
+        </label>
+        <input type="file" name="imagens[]" size="5MB" accept="image/png, image/x-png, image/jpeg, image/pjpeg, image/webp, image/gif" id="files" multiple>
+        <label for="typeselect">Selecione o formato final</label>
+        <select name="typeselect" id="typeselect">
+            <option value="png">png</option>
+            <option value="webp">webp</option>
+            <option value="jpeg">jpeg</option>
+            <option value="gif">gif</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        try{
+            let params = new URLSearchParams(document.location.search)
+            let msg = params.get("msg")
+            document.getElementById('msg').innerText = msg
+        }catch(e){
+            
+        }
+        const prevents = (event)=> {event.preventDefault();
+        //console.log(event)
+        }
+
+        const  dragInput =  document.querySelector('#image')
+        const fileInput = document.querySelector('#files')
+        const events = ['dragenter','dragover','dragleave','drop']
+        console.log(dragInput)
+        events.forEach(eventName => {
+            dragInput.addEventListener(eventName,prevents)
+        });
+        dragInput.addEventListener('drop',(e)=>{
+            console.log(e.dataTransfer.files)
+            fileInput.files = e.dataTransfer.files;
+        })
+         window.addEventListener("dragover",function(e){
+         e = e || event;
+         e.preventDefault();
+         },false);
+        window.addEventListener("drop",function(e){
+        e = e || event;
+        e.preventDefault();
+        },false);
+        //console.log(params.get("msg"))
+    </script>
+</body>
+</html>

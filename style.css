@@ -1,0 +1,77 @@
+#image{
+    width: 50%;
+    aspect-ratio: 16/9;
+    background-color: rgb(122, 122, 122);
+    display: flex;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: 2px dashed #ffff;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    border-radius: 1em;
+}
+#image:hover{
+    background-color: rgb(118, 118, 118);
+    display: flex;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: 2px dashed #e2e2e2;
+    align-items: center;
+    justify-content: center;
+    color: #e2e2e2;
+    border-radius: 1em;
+    transition: all 300ms ease-in-out;
+}
+body{
+    background-color: #0c0c0c;
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffff;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#files{
+    display: none;
+}
+select{
+    color: #ffff;
+    background-color: #2c2c2c;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+    margin: 5px;
+    transition: all 300ms ease-in-out;
+}
+select:hover{
+    color: #ffffff;
+    background-color: #4b4b4b;
+}
+button{
+    background-color: transparent;
+    border: 1px solid #f2f2f2;
+    color: #f2f2f2;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid #959595;
+    color: #959595;
+    border-radius: 0.3em;
+}
+button:active{
+    background-color: #ffff;
+    border: 1px solid #232222;
+    color: #232222;
+    border-radius: 0.3em;
+}

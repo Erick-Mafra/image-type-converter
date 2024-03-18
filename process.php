@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="um conversor de tipos de imagem seja de png para jpeg seja de gif para jpeg ou jpeg para webp teste e se surpeendera com a facilidade">
+    <meta name="description" content="um conversor de tipos de imagem seja de png para jpeg seja de gif para jpeg ou jpeg para webp teste e se surprendera com a facilidade">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images download</title>
